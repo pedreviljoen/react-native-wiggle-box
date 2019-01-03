@@ -1,0 +1,34 @@
+{
+  "name": "react-native-wiggle-box",
+  "version": "1.0.0",
+  "description": "A react native box that wiggles for attention",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'no tests'",
+    "format": "prettier-standard index.js",
+    "precommit": "npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedreviljoen/react-native-wiggle-box.git"
+  },
+  "keywords": [
+    "react native",
+    "animation",
+    "wiggle",
+    "box",
+    "animatable box"
+  ],
+  "author": "Pedre Viljoen <pedre87@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedreviljoen/react-native-wiggle-box/issues"
+  },
+  "homepage": "https://github.com/pedreviljoen/react-native-wiggle-box#readme",
+  "dependencies": {
+    "prettier-standard": "^8.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-native": "^0.57.8"
+  }
+}
