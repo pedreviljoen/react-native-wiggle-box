@@ -6,8 +6,10 @@
 [![Package version](https://img.shields.io/npm/v/react-native-wiggle-box.svg?style=flat-square)](https://npmjs.org/package/react-native-wiggle-box)
 [![Make a pull request](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/npm/l/react-native-wiggle-box.svg?style=flat-square)](https://github.com/pedreviljoen/react-native-wiggle-box/blob/master/LICENSE)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-wiggle-box.svg?style=flat-square)](https://npmjs.org/package/react-native-wiggle-box)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-wiggle-box.svg?style=flat-square)](https://npmjs.org/package/react-native-wiggle-box) 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pedreviljoen/react-native-wiggle-box.svg)](https://greenkeeper.io/)
 [![Travis CI build status](https://img.shields.io/travis/pedreviljoen/react-native-wiggle-box.svg?style=flat-square)](https://travis-ci.org/pedreviljoen/react-native-wiggle-box)
+
 
 
 > A box that wiggles for clickable attention
