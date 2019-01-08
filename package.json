@@ -1,6 +1,6 @@
 {
   "name": "react-native-wiggle-box",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A react native box that wiggles for attention",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
     "url": "https://github.com/pedreviljoen/react-native-wiggle-box.git"
   },
   "keywords": [
+    "react-native",
     "react native",
+    "animation components",
+    "view",
+    "animated view",
     "animation",
     "wiggle",
     "box",

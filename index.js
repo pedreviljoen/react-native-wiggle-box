@@ -34,6 +34,14 @@ class WiggleBox extends React.Component {
     ]).start();
   }
 
+  componentDidMount () {
+    const {active} = this.props
+
+    if (active) {
+      this.triggerWiggle()
+    }
+  }
+
   renderActive = () => {
     const { handlePress, boxStyle } = this.props
     return(
