@@ -1,6 +1,6 @@
 {
   "name": "react-native-wiggle-box",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A react native box that wiggles for attention",
   "main": "index.js",
   "scripts": {
