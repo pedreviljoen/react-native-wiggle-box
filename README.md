@@ -9,6 +9,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-native-wiggle-box.svg?style=flat-square)](https://npmjs.org/package/react-native-wiggle-box) 
 [![Greenkeeper badge](https://badges.greenkeeper.io/pedreviljoen/react-native-wiggle-box.svg)](https://greenkeeper.io/)
 [![Travis CI build status](https://img.shields.io/travis/pedreviljoen/react-native-wiggle-box.svg?style=flat-square)](https://travis-ci.org/pedreviljoen/react-native-wiggle-box)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 
 
@@ -78,26 +79,31 @@ const styles = StyleSheet.create({
     <tr>
         <th>Property</th>
         <th>Description</th> 
+        <th>Type</th>
         <th>Default Value</th>
     </tr>
     <tr>
         <td><code>active</code></td>
-        <td>Boolean value toggling wiggle of box</td> 
+        <td>Value toggling wiggle of box</td> 
+        <td><code>Boolean</code></td>
         <td><code>false</code></td>
     </tr>
     <tr>
         <td><code>boxStyle</code></td>
         <td>Styles of box</td> 
+        <td><code>Object</code></td>
         <td><code>{}</code></td>
     </tr>
     <tr>
         <td><code>handlePress</code></td>
-        <td>Function to execute on click of the box</td> 
+        <td>Function to execute on click of the box</td>
+        <td><code>Function</code></td> 
         <td><code>() => {}</code></td>
     </tr>
     <tr>
         <td><code>duration</code></td>
         <td>Time (ms) for duration of animation</td> 
+        <td><code>Integer</code></td>
         <td><code>100</code></td>
     </tr>
 </table>
