@@ -5,7 +5,8 @@ import PropTypes from "prop-types"
 class WiggleBox extends React.Component {
   constructor(props) {
     super(props)
-    this.rotation = new Animated.Value(0)
+    this.rotation = new Animated.ValueXY()
+    this.bounce = new Animated.ValueXY({x: 0, y: 10})
   }
 
   triggerWiggle = () => {
@@ -34,11 +35,47 @@ class WiggleBox extends React.Component {
     ]).start()
   }
 
+  triggerBounce = () => {
+    Animated.sequence([
+      Animated.spring(this.bounce, {
+        toValue: {x: 0, y: 0},
+        velocity: 25,
+        bounciness: 25
+      })
+    ]).start()
+  }
+
+  getWiggleStyle() {
+    const rotation = this.rotation
+    const rotate = rotation.x.interpolate({
+      inputRange: [-10, 0, 10],
+      outputRange: ['-10deg', '0deg', '10deg']
+    })
+
+    return {
+      ...rotation.getLayout(),
+      transform: [{ rotate }]
+    }
+  }
+
+  getBounceStyle() {
+    const bounce = this.bounce
+    const translateY = bounce.y.interpolate({
+      inputRange: [0, 10],
+      outputRange: [0, -25]
+    })
+
+    return {
+      ...bounce.getLayout(),
+      transform: [{ translateY }]
+    } 
+  }
+
   componentDidMount() {
-    const { active } = this.props
+    const { active, type } = this.props
 
     if (active) {
-      this.triggerWiggle()
+      type === 'wiggle' ? this.triggerWiggle() : this.triggerBounce()
     }
   }
 
@@ -57,15 +94,11 @@ class WiggleBox extends React.Component {
   }
 
   render() {
-    const { active } = this.props
-    const wiggle = this.rotation.interpolate({
-      inputRange: [-20, 20],
-      outputRange: ["-10deg", "10deg"]
-    })
+    const { active, type } = this.props
 
     return (
       <Animated.View
-        style={[styles.boxContainer, active ? { transform: [{ rotate: wiggle }] } : null]}
+        style={[styles.boxContainer, active ? (type === 'wiggle' ? this.getWiggleStyle() : this.getBounceStyle()) : null]}
       >
         {active ? this.renderActive() : this.renderInActive()}
       </Animated.View>
@@ -77,14 +110,16 @@ WiggleBox.defaultProps = {
   active: false,
   boxStyle: {},
   handlePress: () => {},
-  duration: 100
+  duration: 100,
+  type: 'wiggle'
 }
 
 WiggleBox.propTypes = {
   active: PropTypes.bool,
   boxStyle: PropTypes.object,
   handlePress: PropTypes.func,
-  duration: PropTypes.number
+  duration: PropTypes.number,
+  type: PropTypes.string
 }
 
 const styles = StyleSheet.create({

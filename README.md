@@ -26,7 +26,7 @@
 ## Install
 
 ```sh
-yarn install react-native-wiggle-box
+yarn add react-native-wiggle-box
 ```
 
 OR
@@ -53,9 +53,20 @@ class Example extends React.Component {
                 handlePress={this.handleClick}
                 boxStyle={styles.boxContainer}
                 duration={200}
+                type={'wiggle'}
             >
                 <Text>
                     I wiggle
+                </Text>
+            </WiggleBox>
+            <WiggleBox
+                active={true}
+                handlePress={this.handleClick}
+                boxStyle={styles.boxContainer}
+                type={'bounce'}
+            >
+                <Text>
+                    I bounce
                 </Text>
             </WiggleBox>
         </View>
@@ -105,6 +116,12 @@ const styles = StyleSheet.create({
         <td>Time (ms) for duration of animation</td> 
         <td><code>Integer</code></td>
         <td><code>100</code></td>
+    </tr>
+    <tr>
+        <td><code>type</code></td>
+        <td>Distinguish between wiggle or bounce, to draw attention</td> 
+        <td><code>String</code></td>
+        <td><code>wiggle</code></td>
     </tr>
 </table>
 
